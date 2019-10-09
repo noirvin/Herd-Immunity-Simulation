@@ -89,17 +89,22 @@ def test_did_survive_infection():
     if survived:
         assert person.is_alive is True
         assert person.is_vaccinated is True
-        assert person.infection is virus
+        assert person.infection is None
 
         # TODO: Write your own assert statements that test
         # the values of each attribute for a Person who survived
         # assert ...
     else:
         assert person.is_alive is False
-        assert person.is_vaccinated is false
+        assert person.is_vaccinated is False
         assert person.virus is None
 
         # TODO: Write your own assert statements that test
         # the values of each attribute for a Person who did not survive
         # assert ...
-        
+
+        if __name__ == "__main__":
+            test_vacc_person_instantiation()
+            test_not_vacc_person_instantiation()
+            test_sick_person_instantiation()
+            test_did_survive_infection()

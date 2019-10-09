@@ -6,6 +6,8 @@ from virus import Virus
 
 
 class Simulation(object):
+   
+    
     ''' Main class that will run the herd immunity simulation program.
     Expects initialization parameters passed as command line arguments when file is run.
 
@@ -14,6 +16,11 @@ class Simulation(object):
     infected people in a population are all variables that can be set when the program is run.
     '''
     def __init__(self, pop_size, vacc_percentage, initial_infected=1, virus):
+        self.pop_size= input("How large is the population?")
+        self.vacc_percentage = ("What percentage of the population has been vaccinated?")
+        self.initial_infected= initial_infected
+        virus = input("What's the name of the virus you want to use?")
+        self.virus = virus
         ''' Logger object logger records all events during the simulation.
         Population represents all Persons in the population.
         The next_person_id is the next available id for all created Persons,
@@ -36,7 +43,7 @@ class Simulation(object):
         # TODO: Store each newly infected person's ID in newly_infected attribute.
         # At the end of each time step, call self._infect_newly_infected()
         # and then reset .newly_infected back to an empty list.
-        self.logger = None
+        self.logger = Logger("logger.txt")
         self.population = [] # List of Person objects
         self.pop_size = pop_size # Int
         self.next_person_id = 0 # Int
@@ -60,6 +67,7 @@ class Simulation(object):
                 list: A list of Person objects.
 
         '''
+        for person in range()
         # TODO: Finish this method!  This method should be called when the simulation
         # begins, to create the population that will be used. This method should return
         # an array filled with Person objects that matches the specifications of the

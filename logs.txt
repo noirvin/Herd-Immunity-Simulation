@@ -1,0 +1,1 @@
+Population size: 100000	 Vacc Percentage 0.2	 Virus Name Black Plague	 Mortality Rate: 0.25	 Basic Reproduction Number: 0.7

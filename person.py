@@ -29,7 +29,7 @@ class Person(object):
         if survival_chances>= self.infection.mortality_rate:
             self.is_alive = True
             self.is_vaccinated = True
-            self.infection = None
+            self.infection = False
         else:
             self.is_alive = False
             return self.is_alive
